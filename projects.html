@@ -35,74 +35,255 @@
                     <label for="technology-filter">Filter by technology</label>
                     <select id="technology-filter">
                         <option value="all">All technologies</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="markdown">Markdown</option>
+                        <option value="csv">CSV</option>
+                        <option value="jupyternotebook">Jupyter Notebook</option>
                         <option value="dockerfile">Dockerfile</option>
+                        <option value="bicep">Bicep</option>
+                        <option value="shell">Shell</option>
+                        <option value="php">PHP</option>
                         <option value="java">Java</option>
+                        <option value="jaxrs">JAX-RS</option>
+                        <option value="jersey">Jersey</option>
+                        <option value="xml">XML</option>
+                        <option value="python">Python</option>
                         <option value="ruby">Ruby</option>
                         <option value="clojure">Clojure</option>
                         <option value="csharp">C#</option>
                     </select>
-                    <p class="filter-status" id="filter-status" aria-live="polite">Showing 6 projects</p>
+                    <p class="filter-status" id="filter-status" aria-live="polite">Showing 28 repositories</p>
                 </div>
                 <div class="project-grid" id="project-grid">
+                    <article class="project-card" data-technologies="html">
+                        <div class="project-card-content">
+                            <h2>kgkon.github.io</h2>
+                            <p>Source for this personal website.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>HTML</li></ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/kgkon.github.io">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="jupyternotebook">
+                        <div class="project-card-content">
+                            <h2>model-mastery</h2>
+                            <p>Materials for running the Model Mastery Workshop series (2026), offering hands-on experience with partner models in Microsoft Foundry through in-venue events and a self-guided session.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>Jupyter Notebook</li></ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/model-mastery">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="markdown html css javascript csv">
+                        <div class="project-card-content">
+                            <h2>a11yTO-workshop-2026</h2>
+                            <p>A hands-on A11yTO workshop for building an AI skill that triages accessibility findings, with sample audit data and policy references.</p>
+                            <ul class="technology-list" aria-label="Technologies used">
+                                <li>Markdown</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>CSV</li>
+                            </ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/a11yTO-workshop-2026">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
                     <article class="project-card" data-technologies="dockerfile">
                         <div class="project-card-content">
                             <h2>open-hack-agents-codespace</h2>
-                            <p>Fork of Microsoft's Open Hack Agents Codespace repository.</p>
-                            <ul class="technology-list" aria-label="Technologies used">
-                                <li>Dockerfile</li>
-                            </ul>
+                            <p>Fork of microsoft/open-hack-agents-codespace.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>Dockerfile</li></ul>
                         </div>
                         <a class="project-link" href="https://github.com/kgkon/open-hack-agents-codespace">View repository <span aria-hidden="true">↗</span></a>
                     </article>
+                    <article class="project-card" data-technologies="bicep">
+                        <div class="project-card-content">
+                            <h2>contoso-chat</h2>
+                            <p>End-to-end sample for creating a RAG application with Prompty and Azure AI Foundry, including GPT-3.5 Turbo code, evaluations, and AZD deployment automation.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>Bicep</li></ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/contoso-chat">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="shell">
+                        <div class="project-card-content">
+                            <h2>multitenant-akeyless-lab</h2>
+                            <p>A multi-tenant Akeyless lab repository.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>Shell</li></ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/multitenant-akeyless-lab">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="jupyternotebook">
+                        <div class="project-card-content">
+                            <h2>Redis-Workshops</h2>
+                            <p>Learn Redis Enterprise and Redis Stack with simple Google Colab notebooks.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>Jupyter Notebook</li></ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/Redis-Workshops">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="javascript">
+                        <div class="project-card-content">
+                            <h2>flatris</h2>
+                            <p>A fast-paced, two-player web game.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>JavaScript</li></ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/flatris">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="java jaxrs jersey xml">
+                        <div class="project-card-content">
+                            <h2>ctswizards</h2>
+                            <p>An IoT threat-detection and monitoring prototype that uses machine learning to identify gunshot, threat, or abuse signatures and exposes device, alert, and E911 services through a REST API.</p>
+                            <ul class="technology-list" aria-label="Technologies used">
+                                <li>Java</li><li>JAX-RS</li><li>Jersey</li><li>XML</li>
+                            </ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/ctswizards">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="javascript">
+                        <div class="project-card-content">
+                            <h2>workshop-aug13</h2>
+                            <p>Workshop for the TorontoJS JS Workshop event.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>JavaScript</li></ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/workshop-aug13">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="javascript">
+                        <div class="project-card-content">
+                            <h2>tfjs-torontoai-lecture</h2>
+                            <p>TensorFlow.js lecture materials for Toronto AI.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>JavaScript</li></ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/tfjs-torontoai-lecture">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="javascript">
+                        <div class="project-card-content">
+                            <h2>react-select</h2>
+                            <p>The Select Component for React.js.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>JavaScript</li></ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/react-select">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="javascript">
+                        <div class="project-card-content">
+                            <h2>react-dojo</h2>
+                            <p>React learning materials.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>JavaScript</li></ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/react-dojo">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="javascript">
+                        <div class="project-card-content">
+                            <h2>react-360</h2>
+                            <p>Create amazing 360 and VR content using React.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>JavaScript</li></ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/react-360">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="javascript">
+                        <div class="project-card-content">
+                            <h2>pipelines-javascript</h2>
+                            <p>Sample Node.js app for Azure Pipelines documentation.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>JavaScript</li></ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/pipelines-javascript">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="javascript">
+                        <div class="project-card-content">
+                            <h2>date-display-app</h2>
+                            <p>A date display sample app.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>JavaScript</li></ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/date-display-app">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="shell">
+                        <div class="project-card-content">
+                            <h2>azure-quickstart-templates</h2>
+                            <p>Azure Quickstart Templates.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>Shell</li></ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/azure-quickstart-templates">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="php">
+                        <div class="project-card-content">
+                            <h2>QBOConceptsTutorial-PHP</h2>
+                            <p>Sample PHP app demonstrating QBO concepts such as invoicing, billing, and inventory management.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>PHP</li></ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/QBOConceptsTutorial-PHP">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="javascript">
+                        <div class="project-card-content">
+                            <h2>QBOConceptsTutorial-DotNet</h2>
+                            <p>Sample .NET app demonstrating QBO concepts such as invoicing, billing, and inventory management.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>JavaScript</li></ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/QBOConceptsTutorial-DotNet">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
                     <article class="project-card" data-technologies="java">
                         <div class="project-card-content">
-                            <h2>spring-cloud-contract-samples</h2>
-                            <p>Samples for the Spring Cloud Contract project.</p>
-                            <ul class="technology-list" aria-label="Technologies used">
-                                <li>Java</li>
-                            </ul>
+                            <h2>QBOConceptsTutorial-Java</h2>
+                            <p>Sample Java app demonstrating QBO concepts such as invoicing, billing, and inventory management.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>Java</li></ul>
                         </div>
-                        <a class="project-link" href="https://github.com/kgkon/spring-cloud-contract-samples">View repository <span aria-hidden="true">↗</span></a>
+                        <a class="project-link" href="https://github.com/kgkon/QBOConceptsTutorial-Java">View repository <span aria-hidden="true">↗</span></a>
                     </article>
-                    <article class="project-card" data-technologies="ruby">
+                    <article class="project-card" data-technologies="python">
                         <div class="project-card-content">
-                            <h2>string-kata</h2>
-                            <p>String Calculator TDD Kata for Ruby Hack Night.</p>
-                            <ul class="technology-list" aria-label="Technologies used">
-                                <li>Ruby</li>
-                            </ul>
+                            <h2>HackathonSamples</h2>
+                            <p>Sample apps using OAuth 2.0 to demonstrate QBO API calls.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>Python</li></ul>
                         </div>
-                        <a class="project-link" href="https://github.com/kgkon/string-kata">View repository <span aria-hidden="true">↗</span></a>
+                        <a class="project-link" href="https://github.com/kgkon/HackathonSamples">View repository <span aria-hidden="true">↗</span></a>
                     </article>
-                    <article class="project-card" data-technologies="ruby">
+                    <article class="project-card" data-technologies="python">
                         <div class="project-card-content">
-                            <h2>to-ruby-webpack-workshop</h2>
-                            <p>Toronto Ruby Brigade Webpacker Workshop.</p>
-                            <ul class="technology-list" aria-label="Technologies used">
-                                <li>Ruby</li>
-                            </ul>
+                            <h2>Grid</h2>
+                            <p>Python repository forked from OpenMined/PyGrid-deprecated (see PySyft).</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>Python</li></ul>
                         </div>
-                        <a class="project-link" href="https://github.com/kgkon/to-ruby-webpack-workshop">View repository <span aria-hidden="true">↗</span></a>
-                    </article>
-                    <article class="project-card" data-technologies="clojure">
-                        <div class="project-card-content">
-                            <h2>JS-Workshop</h2>
-                            <p>Sample project for the JS Workshop.</p>
-                            <ul class="technology-list" aria-label="Technologies used">
-                                <li>Clojure</li>
-                            </ul>
-                        </div>
-                        <a class="project-link" href="https://github.com/kgkon/JS-Workshop">View repository <span aria-hidden="true">↗</span></a>
+                        <a class="project-link" href="https://github.com/kgkon/Grid">View repository <span aria-hidden="true">↗</span></a>
                     </article>
                     <article class="project-card" data-technologies="csharp">
                         <div class="project-card-content">
                             <h2>OpenMined</h2>
                             <p>The OpenMined Unity Application.</p>
-                            <ul class="technology-list" aria-label="Technologies used">
-                                <li>C#</li>
-                            </ul>
+                            <ul class="technology-list" aria-label="Technologies used"><li>C#</li></ul>
                         </div>
                         <a class="project-link" href="https://github.com/kgkon/OpenMined">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="python">
+                        <div class="project-card-content">
+                            <h2>PySyft</h2>
+                            <p>Private Deep Learning Client.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>Python</li></ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/PySyft">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="clojure">
+                        <div class="project-card-content">
+                            <h2>JS-Workshop</h2>
+                            <p>Sample project for the JS Workshop.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>Clojure</li></ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/JS-Workshop">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="ruby">
+                        <div class="project-card-content">
+                            <h2>to-ruby-webpacker-workshop</h2>
+                            <p>Toronto Ruby Brigade Webpacker Workshop.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>Ruby</li></ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/to-ruby-webpacker-workshop">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="ruby">
+                        <div class="project-card-content">
+                            <h2>string-kata</h2>
+                            <p>String Calculator TDD Kata for Ruby Hack Night.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>Ruby</li></ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/string-kata">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="java">
+                        <div class="project-card-content">
+                            <h2>spring-cloud-contract-samples</h2>
+                            <p>Samples for the Spring Cloud Contract project.</p>
+                            <ul class="technology-list" aria-label="Technologies used"><li>Java</li></ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/spring-cloud-contract-samples">View repository <span aria-hidden="true">↗</span></a>
                     </article>
                 </div>
             </section>
