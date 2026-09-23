@@ -48,6 +48,9 @@ body {
     min-height: 100vh;
     min-height: 100svh;
     margin: 0;
+    background-color: var(--page-bg);
+    color: var(--text);
+    transition: background-color 200ms ease, color 200ms ease;
 }
 
 .site-shell {
@@ -76,6 +79,15 @@ body {
     font-weight: 700;
     letter-spacing: -0.02em;
     text-decoration: none;
+}
+
+.site-header,
+.site-brand,
+.nav-link,
+h1,
+p,
+button {
+    transition: color 200ms ease, background-color 200ms ease, border-color 200ms ease;
 }
 
 .site-navigation {
@@ -242,5 +254,17 @@ a:focus-visible {
 
     .nav-link {
         padding: 0.8rem 0.25rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body,
+    .site-header,
+    .site-brand,
+    .nav-link,
+    h1,
+    p,
+    button {
+        transition-duration: 0.01ms;
     }
 }
