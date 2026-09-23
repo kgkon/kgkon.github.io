@@ -7,14 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="page-shell">
-        <section class="welcome-card" aria-labelledby="welcome-title">
-            <div class="accent-mark" aria-hidden="true"></div>
-            <h1 id="welcome-title">Greg's World</h1>
-            <p>My website is live.</p>
-            <button id="helloButton" type="button">Click Me</button>
-        </section>
-    </main>
+    <div class="site-shell">
+        <header class="site-header">
+            <a class="site-brand" href="#home">Greg's World</a>
+            <nav aria-label="Main navigation">
+                <a class="nav-link" href="#home" aria-current="page">Home</a>
+            </nav>
+        </header>
+
+        <main class="page-main" id="home">
+            <section class="welcome-content" aria-labelledby="welcome-title">
+                <h1 id="welcome-title">Greg's World</h1>
+                <p>My website is live.</p>
+                <button id="helloButton" type="button">Click Me</button>
+            </section>
+        </main>
+    </div>
 
     <script src="script.js"></script>
 </body>
