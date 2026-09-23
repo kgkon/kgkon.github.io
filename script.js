@@ -54,3 +54,29 @@ themeToggle.addEventListener("click", function () {
         // The selected theme remains active for this page if storage is unavailable.
     }
 });
+
+const technologyFilter = document.getElementById("technology-filter");
+
+if (technologyFilter) {
+    const projectCards = Array.from(document.querySelectorAll(".project-card"));
+    const filterStatus = document.getElementById("filter-status");
+
+    technologyFilter.addEventListener("change", function () {
+        const selectedTechnology = technologyFilter.value;
+        let visibleCount = 0;
+
+        projectCards.forEach(function (card) {
+            const technologies = card.dataset.technologies.split(/\s+/);
+            const isVisible = selectedTechnology === "all" || technologies.includes(selectedTechnology);
+
+            card.hidden = !isVisible;
+            if (isVisible) {
+                visibleCount += 1;
+            }
+        });
+
+        filterStatus.textContent = visibleCount === 0
+            ? "No projects found for this technology."
+            : `Showing ${visibleCount} ${visibleCount === 1 ? "project" : "projects"}`;
+    });
+}

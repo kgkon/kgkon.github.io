@@ -26,9 +26,85 @@
                 </button>
             </div>
         </header>
-        <main class="page-main">
-            <section class="welcome-content" aria-labelledby="page-title">
-                <h1 id="page-title">Projects</h1>
+        <main class="page-main projects-main">
+            <section class="projects-section" aria-labelledby="page-title">
+                <div class="projects-heading">
+                    <h1 id="page-title">Projects</h1>
+                </div>
+                <div class="project-filter">
+                    <label for="technology-filter">Filter by technology</label>
+                    <select id="technology-filter">
+                        <option value="all">All technologies</option>
+                        <option value="dockerfile">Dockerfile</option>
+                        <option value="java">Java</option>
+                        <option value="ruby">Ruby</option>
+                        <option value="clojure">Clojure</option>
+                        <option value="csharp">C#</option>
+                    </select>
+                    <p class="filter-status" id="filter-status" aria-live="polite">Showing 6 projects</p>
+                </div>
+                <div class="project-grid" id="project-grid">
+                    <article class="project-card" data-technologies="dockerfile">
+                        <div class="project-card-content">
+                            <h2>open-hack-agents-codespace</h2>
+                            <p>Fork of Microsoft's Open Hack Agents Codespace repository.</p>
+                            <ul class="technology-list" aria-label="Technologies used">
+                                <li>Dockerfile</li>
+                            </ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/open-hack-agents-codespace">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="java">
+                        <div class="project-card-content">
+                            <h2>spring-cloud-contract-samples</h2>
+                            <p>Samples for the Spring Cloud Contract project.</p>
+                            <ul class="technology-list" aria-label="Technologies used">
+                                <li>Java</li>
+                            </ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/spring-cloud-contract-samples">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="ruby">
+                        <div class="project-card-content">
+                            <h2>string-kata</h2>
+                            <p>String Calculator TDD Kata for Ruby Hack Night.</p>
+                            <ul class="technology-list" aria-label="Technologies used">
+                                <li>Ruby</li>
+                            </ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/string-kata">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="ruby">
+                        <div class="project-card-content">
+                            <h2>to-ruby-webpack-workshop</h2>
+                            <p>Toronto Ruby Brigade Webpacker Workshop.</p>
+                            <ul class="technology-list" aria-label="Technologies used">
+                                <li>Ruby</li>
+                            </ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/to-ruby-webpack-workshop">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="clojure">
+                        <div class="project-card-content">
+                            <h2>JS-Workshop</h2>
+                            <p>Sample project for the JS Workshop.</p>
+                            <ul class="technology-list" aria-label="Technologies used">
+                                <li>Clojure</li>
+                            </ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/JS-Workshop">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card" data-technologies="csharp">
+                        <div class="project-card-content">
+                            <h2>OpenMined</h2>
+                            <p>The OpenMined Unity Application.</p>
+                            <ul class="technology-list" aria-label="Technologies used">
+                                <li>C#</li>
+                            </ul>
+                        </div>
+                        <a class="project-link" href="https://github.com/kgkon/OpenMined">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+                </div>
             </section>
         </main>
     </div>
