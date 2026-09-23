@@ -14,8 +14,9 @@
 }
 
 body {
-    min-width: 320px;
+    min-width: 0;
     min-height: 100vh;
+    min-height: 100svh;
     margin: 0;
     background:
         radial-gradient(ellipse at 18% 12%, rgba(209, 225, 255, 0.58), transparent 34rem),
@@ -26,13 +27,15 @@ body {
 .page-shell {
     display: grid;
     min-height: 100vh;
-    padding: 2rem;
+    min-height: 100svh;
+    padding: clamp(1rem, 4vw, 2rem);
     place-items: center;
 }
 
 .welcome-card {
     width: min(100%, 42rem);
-    padding: clamp(2.5rem, 8vw, 5.5rem);
+    min-width: 0;
+    padding: clamp(1.5rem, 8vw, 5.5rem);
     border: 1px solid rgba(255, 255, 255, 0.88);
     border-radius: 1.5rem;
     background: rgba(255, 255, 255, 0.86);
@@ -96,12 +99,13 @@ button:focus-visible {
 }
 
 @media (max-width: 480px) {
-    .page-shell {
-        padding: 1.25rem;
+    .welcome-card {
+        padding: clamp(1.5rem, 8vw, 2.5rem);
+        border-radius: 1.15rem;
     }
 
-    .welcome-card {
-        border-radius: 1.15rem;
+    .accent-mark {
+        margin-bottom: 1.5rem;
     }
 }
 
