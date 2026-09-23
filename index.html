@@ -9,9 +9,17 @@
 <body>
     <div class="site-shell">
         <header class="site-header">
-            <a class="site-brand" href="#home">Greg's World</a>
-            <nav aria-label="Main navigation">
-                <a class="nav-link" href="#home" aria-current="page">Home</a>
+            <a class="site-brand" href="index.html#home">Greg's World</a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="site-navigation" id="site-navigation" aria-label="Main navigation">
+                <a class="nav-link" href="index.html#home" aria-current="page">Home</a>
+                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="projects.html">Projects</a>
+                <a class="nav-link" href="contact.html">Contact</a>
             </nav>
         </header>
 
