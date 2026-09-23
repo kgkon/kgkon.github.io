@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Greg's Website</title>
+    <script src="theme-init.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="site-shell">
         <header class="site-header">
             <a class="site-brand" href="index.html#home">Greg's World</a>
-            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
             <nav class="site-navigation" id="site-navigation" aria-label="Main navigation">
                 <a class="nav-link" href="index.html#home">Home</a>
                 <a class="nav-link" href="about.html">About</a>
                 <a class="nav-link" href="projects.html" aria-current="page">Projects</a>
                 <a class="nav-link" href="contact.html">Contact</a>
             </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">Dark mode</button>
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </header>
         <main class="page-main">
             <section class="welcome-content" aria-labelledby="page-title">

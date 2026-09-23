@@ -30,3 +30,27 @@ document.addEventListener("keydown", function (event) {
         setMenuOpen(false);
     }
 });
+
+const themeToggle = document.getElementById("themeToggle");
+const themeStorageKey = "greg-site-theme";
+
+function updateThemeToggle() {
+    const isDark = document.documentElement.dataset.theme === "dark";
+    themeToggle.textContent = isDark ? "Light mode" : "Dark mode";
+    themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+    themeToggle.setAttribute("aria-pressed", String(isDark));
+}
+
+updateThemeToggle();
+
+themeToggle.addEventListener("click", function () {
+    const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = nextTheme;
+    updateThemeToggle();
+
+    try {
+        localStorage.setItem(themeStorageKey, nextTheme);
+    } catch (error) {
+        // The selected theme remains active for this page if storage is unavailable.
+    }
+});

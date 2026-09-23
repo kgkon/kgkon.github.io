@@ -1,12 +1,42 @@
 :root {
     color-scheme: light;
     font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    color: #202938;
-    background: #fff;
+    color: var(--text);
+    background: var(--page-bg);
+    --page-bg: #fff;
+    --text: #202938;
+    --heading: #182231;
+    --muted: #5e6877;
+    --border: #e6e9ee;
+    --control-border: #d9dee7;
+    --control-bg: #fff;
+    --control-hover-bg: #f7f8fa;
+    --nav-text: #505b6b;
+    --accent: #2458bd;
+    --accent-hover: #19499f;
+    --button-text: #fff;
+    --focus: #9ab8f2;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --page-bg: #151a23;
+    --text: #e5eaf2;
+    --heading: #f3f5f8;
+    --muted: #aab4c2;
+    --border: #343d4a;
+    --control-border: #465264;
+    --control-bg: #1d2531;
+    --control-hover-bg: #283241;
+    --nav-text: #c0c9d5;
+    --accent: #8fb1ff;
+    --accent-hover: #aec6ff;
+    --button-text: #151a23;
+    --focus: #91adf0;
 }
 
 * {
@@ -37,11 +67,11 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1rem;
-    border-bottom: 1px solid #e6e9ee;
+    border-bottom: 1px solid var(--border);
 }
 
 .site-brand {
-    color: #202938;
+    color: var(--text);
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -54,13 +84,19 @@ body {
     gap: 1rem;
 }
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
 .menu-toggle {
     display: none;
 }
 
 .nav-link {
     padding: 0.55rem 0;
-    color: #505b6b;
+    color: var(--nav-text);
     font-size: 0.925rem;
     font-weight: 550;
     text-decoration: none;
@@ -68,7 +104,7 @@ body {
 
 .nav-link:hover,
 .nav-link[aria-current="page"] {
-    color: #2458bd;
+    color: var(--accent);
 }
 
 .page-main {
@@ -85,7 +121,7 @@ body {
 
 h1 {
     margin: 0;
-    color: #182231;
+    color: var(--heading);
     font-size: clamp(2.5rem, 7vw, 4.5rem);
     font-weight: 720;
     letter-spacing: -0.055em;
@@ -95,7 +131,7 @@ h1 {
 p {
     max-width: 36rem;
     margin: 1.25rem 0 2rem;
-    color: #5e6877;
+    color: var(--muted);
     font-size: clamp(1rem, 2vw, 1.125rem);
     line-height: 1.7;
 }
@@ -103,10 +139,10 @@ p {
 button {
     min-height: 2.9rem;
     padding: 0.7rem 1.2rem;
-    border: 1px solid #2458bd;
+    border: 1px solid var(--accent);
     border-radius: 0.45rem;
-    background: #2458bd;
-    color: #fff;
+    background: var(--accent);
+    color: var(--button-text);
     font: inherit;
     font-size: 0.95rem;
     font-weight: 650;
@@ -114,13 +150,29 @@ button {
 }
 
 button:hover {
-    border-color: #19499f;
-    background: #19499f;
+    border-color: var(--accent-hover);
+    background: var(--accent-hover);
+}
+
+.theme-toggle {
+    min-height: 2.5rem;
+    padding: 0.5rem 0.8rem;
+    border-color: var(--control-border);
+    border-radius: 0.4rem;
+    background: var(--control-bg);
+    color: var(--text);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+button.theme-toggle:hover {
+    border-color: var(--control-border);
+    background: var(--control-hover-bg);
 }
 
 button:focus-visible,
 a:focus-visible {
-    outline: 3px solid #9ab8f2;
+    outline: 3px solid var(--focus);
     outline-offset: 3px;
 }
 
@@ -150,15 +202,15 @@ a:focus-visible {
         padding: 0.65rem;
         align-content: center;
         gap: 0.3rem;
-        border: 1px solid #d9dee7;
+        border: 1px solid var(--control-border);
         border-radius: 0.4rem;
-        background: #fff;
-        color: #202938;
+        background: var(--control-bg);
+        color: var(--text);
     }
 
-    .menu-toggle:hover {
-        border-color: #aeb9ca;
-        background: #f7f8fa;
+    button.menu-toggle:hover {
+        border-color: var(--control-border);
+        background: var(--control-hover-bg);
     }
 
     .menu-toggle span {
@@ -171,12 +223,17 @@ a:focus-visible {
 
     .site-navigation {
         display: none;
+        order: 3;
         width: 100%;
         padding-block: 0.5rem;
         flex-direction: column;
         align-items: stretch;
         gap: 0;
-        border-top: 1px solid #e6e9ee;
+        border-top: 1px solid var(--border);
+    }
+
+    .header-actions {
+        order: 2;
     }
 
     .site-navigation.is-open {
